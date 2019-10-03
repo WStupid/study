@@ -1,0 +1,27 @@
+https://nodejs.org/dist  (node.js 库地址)
+
+  1、下载（下载xz格式）
+   wget 库地址
+   
+  2、解压
+ 
+   gz解压： tar -xcf 下载的git版本名字
+  
+   xz解压: xz -d 文件名.xz
+          tar -xcf 文件名.tar
+
+  3、 配置环境目录 	
+   ln -s 安装目录文件/文件名/bin/node /usr/local/bin/node
+   ln -s 安装目录文件/文件名/bin/npm /usr/local/bin/npm
+   
+  成功之后 node -v 
+  
+  4、卸载
+  yum remove nodejs npm -y 
+
+  进入 /usr/local/lib 删除所有 node 和 node_modules文件夹
+  进入 /usr/local/include 删除所有 node 和  node_modules 文件夹
+
+  进入 /usr/local/bin 删除 node 的可执行文件node和npm
+  rm -rf 安装文件
+

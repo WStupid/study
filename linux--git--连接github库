@@ -1,0 +1,21 @@
+0、设置用户名和email
+   git config --global user.name "your name "
+   git config --global user.email 'your email"
+   执行完之后该目录下会新增一个.gitconfig文件
+   ls -al 查看
+   
+1、为GiTHub 添加SSH Keys
+  create ssh keys
+  
+  $ssh-keygen -t ras -C "your github email"
+  
+  系统会提示key的保存位置（一般是~/.ssh目录）和指定口令，保持默认，连续三次回车即可。
+  Your public key has been saved in /root/.ssh/id_rsa.pub。（这里是文件保存路径）
+  
+2、show your rsa_pub and copy rsa at loging github setting 
+   SSH keys
+  $cat /root/.ssh/id_rsa.pub (这里复制的时候注意cat出来的文字全部复制)  
+  
+3、test
+   $ssh -T git@github.com
+    if successful mean test success
