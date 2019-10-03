@@ -1,0 +1,37 @@
+git 库地址（https://www.kernel.org/pub/software/scm/git/）
+
+1. 安装 wget
+  yum install -y wget
+  
+2. 安装依赖  
+  yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc gcc perl-ExtUtils-MakeMaker
+
+3. 安装git
+
+   
+   
+   1、选择目录下载（随便哪里都可以）
+     cd /usr/local/src/
+	 
+   2、wget git
+     wget https://www.kernel.org/pub/software/scm/git/版本
+	 
+   3、解压压缩包	 
+   gz解压： tar -vxf 下载的git版本名字
+    
+	 
+   xz解压: xz -d 文件名.xz
+          tar -xcf 文件名.tar
+	 
+   4、进入解压好的文件
+     cd git文件夹名
+	 
+   5、配置
+    # make prefix=/usr/local/git all
+    # make prefix=/usr/local/git install
+    # ln -s /usr/local/git/bin/git /bin/git   
+	
+   6、查看是否成功
+    git --version
+	
+
